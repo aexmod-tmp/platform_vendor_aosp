@@ -25,4 +25,11 @@ aosp_soong:
 	echo '    "QCOMMediaPath": "$(call project-path-for,qcom-media)",';  \
 	echo '    "QCOMSensorsPath": "$(call project-path-for,qcom-sensors)"';  \
 	echo '},'; \
+	echo '"Qualcomm": {'; \
+	echo '    "BoardUsesQTIHardware": $(if $(filter true,$(BOARD_USES_QTI_HARDWARE)),true,false),'; \
+	echo '    "BoardUsesQCOMHardware": $(if $(filter true,$(BOARD_USES_QCOM_HARDWARE)),true,false),'; \
+	echo '    "TargetUsesQCOMBsp": $(if $(filter true,$(TARGET_USES_QCOM_BSP)),true,false),'; \
+	echo '    "TargetUsesQCOMLegacyBsp": $(if $(filter true,$(TARGET_USES_QCOM_LEGACY_BSP)),true,false),'; \
+	echo '    "BoardUsesLegacyAlsa": $(if $(filter true,$(BOARD_USES_LEGACY_ALSA_AUDIO)),true,false)'; \
+	echo '},'; \
 	echo '') > $(SOONG_VARIABLES_TMP)
