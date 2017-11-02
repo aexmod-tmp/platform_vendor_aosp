@@ -7,9 +7,45 @@ type Product_variables struct {
 	Uses_non_treble_camera struct {
 		Cflags []string
 	}
+
+	Has_legacy_camera_hal1 struct {
+		Cflags []string
+	}
+
+	BoardUsesQTIHardware struct {
+		Cflags []string
+		Cppflags []string
+	}
+
+	BoardUsesQCOMHardware struct {
+		Cflags []string
+		Cppflags []string
+	}
+
+	TargetUsesQCOMBsp struct {
+		Cflags []string
+		Cppflags []string
+	}
+
+	TargetUsesQCOMLegacyBsp struct {
+		Cflags []string
+		Cppflags []string
+	}
+
+	BoardUsesLegacyAlsa struct {
+		Cflags []string
+		Cppflags []string
+	}
+>>>>>>> 9253f15... Soong: add TARGET_HAS_LEGACY_CAMERA_HAL1 to soong variables
 }
 
 type ProductVariables struct {
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Uses_non_treble_camera  *bool `json:",omitempty"`
+	Has_legacy_camera_hal1  *bool `json:",omitempty"`
+	BoardUsesQTIHardware  *bool `json:",omitempty"`
+	BoardUsesQCOMHardware  *bool `json:",omitempty"`
+	TargetUsesQCOMBsp  *bool `json:",omitempty"`
+	TargetUsesQCOMLegacyBsp  *bool `json:",omitempty"`
+	BoardUsesLegacyAlsa  *bool `json:",omitempty"`
 }
