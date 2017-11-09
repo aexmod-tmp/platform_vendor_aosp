@@ -36,7 +36,6 @@ type Product_variables struct {
 		Cflags []string
 		Cppflags []string
 	}
->>>>>>> 9253f15... Soong: add TARGET_HAS_LEGACY_CAMERA_HAL1 to soong variables
 }
 
 type ProductVariables struct {
