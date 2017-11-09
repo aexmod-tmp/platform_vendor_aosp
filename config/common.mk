@@ -19,11 +19,20 @@
 
 PRODUCT_BRAND ?= AEX
 
+
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh
+
+# init.d script support
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# Speed up compiling time
+EXCLUDE_SYSTEMUI_TESTS := true
 
 # Bootanimation
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
@@ -36,15 +45,24 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
-    Launcher3 \
+    LawnChair \
+    Lawnfeed \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
     Turbo \
     ViaBrowser \
-    AEXPapers \
     Phonograph \
-    WallpaperPickerGoogle
+    WallpaperPickerGoogle 
+#    KernelAdiutor
+
+PRODUCT_PACKAGES += \
+    ViPER4Android
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/viperfx/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
+    vendor/aosp/prebuilt/common/viperfx/libV4AJniUtils.so:system/lib/libV4AJniUtils.so
+
+#    vendor/aosp/prebuilt/common/viperfx/audio_effects.conf:system/etc/audio_effects.conf \
 
 # Themes
 PRODUCT_PACKAGES += \
