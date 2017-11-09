@@ -11,33 +11,63 @@ cp -f /tmp/install/bin/backuptool.functions /tmp
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
-  mkdir -p /tmp/addon.d/
-  cp -a /system/addon.d/* /tmp/addon.d/
-  chmod 755 /tmp/addon.d/*.sh
+  if [ -d /system/addon.d/ ]; then
+    mkdir -p /tmp/addon.d/
+    cp -a /system/addon.d/* /tmp/addon.d/
+    chmod 755 /tmp/addon.d/*.sh
+  fi
 }
 
-# Restore /system/addon.d in /tmp/addon.d
+# Restore /system/addon.d from /tmp/addon.d
 restore_addon_d() {
-  cp -a /tmp/addon.d/* /system/addon.d/
-  rm -rf /tmp/addon.d/
+  if [ -d /tmp/addon.d/ ]; then
+    mkdir -p /system/addon.d/
+    cp -a /tmp/addon.d/* /system/addon.d/
+    rm -rf /tmp/addon.d/
+  fi
 }
 
+check_blacklist() {
+  if [ -f /system/addon.d/blacklist -a -d /$1/addon.d/ ]; then
+      ## Discard any known bad backup scripts
+      cd /$1/addon.d/
+      for f in *sh; do
+          [ -f $f ] || continue
+          s=$(md5sum $f | cut -c-32)
+          grep -q $s /system/addon.d/blacklist && rm -f $f
+      done
+  fi
+}
 # Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
-for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
-  $script $1
-done
+if [ -d /tmp/addon.d/ ]; then
+  for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
+    $script $1
+  done
+fi
 }
 
 case "$1" in
   backup)
     mkdir -p $C
+    if check_prereq; then
+        if check_whitelist system; then
+            exit 127
+        fi
+    fi
+    check_blacklist system
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
     run_stage post-backup
   ;;
   restore)
+    if check_prereq; then
+        if check_whitelist tmp; then
+            exit 127
+        fi
+    fi
+    check_blacklist tmp
     run_stage pre-restore
     run_stage restore
     run_stage post-restore
