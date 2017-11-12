@@ -70,5 +70,13 @@
         <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
         <permission name="android.permission.PREVENT_POWER_KEY"/>
     </privapp-permissions>
+    <privapp-permissions
+            package="com.google.android.apps.turbo">
+        <permission name="android.permission.BATTERY_STATS"/>
+        <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.READ_LOGS"/>
+        <permission name="android.permission.REBOOT"/>
+    </privapp-permissions>
 </permissions>
  
