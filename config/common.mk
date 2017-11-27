@@ -56,9 +56,9 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle 
 #    KernelAdiutor
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ViPER4Android
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/viperfx/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
     vendor/aosp/prebuilt/common/viperfx/libV4AJniUtils.so:system/lib/libV4AJniUtils.so
 
