@@ -36,7 +36,7 @@ include $(BUILD_PREBUILT)
 
 #Phonograph
 include $(CLEAR_VARS)
-LOCAL_MODULE := Phonograph
+LOCAL_MODULE := Retro
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional

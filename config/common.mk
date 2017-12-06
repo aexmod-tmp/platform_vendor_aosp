@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     Stk \
     Turbo \
     ViaBrowser \
-    Phonograph \
+    Retro \
     WallpaperPickerGoogle 
 #    KernelAdiutor
 
