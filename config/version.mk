@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Extended Versioning
-EXTENDED_VERSION = v5.0
+EXTENDED_VERSION = v5.1
 
 #ifndef EXTENDED_BUILD_TYPE
     EXTENDED_BUILD_TYPE := Mod-Beta
