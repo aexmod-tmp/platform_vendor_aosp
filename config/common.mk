@@ -56,13 +56,12 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle 
 #    KernelAdiutor
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     ViPER4Android
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/viperfx/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
-    vendor/aosp/prebuilt/common/viperfx/libV4AJniUtils.so:system/lib/libV4AJniUtils.so
-
-#    vendor/aosp/prebuilt/common/viperfx/audio_effects.conf:system/etc/audio_effects.conf \
+    vendor/aosp/prebuilt/common/viperfx/libV4AJniUtils.so:system/lib/libV4AJniUtils.so \
+    vendor/aosp/prebuilt/common/viperfx/audio_effects.conf:system/etc/audio_effects.conf
 
 # Themes
 PRODUCT_PACKAGES += \
@@ -155,7 +154,8 @@ PRODUCT_PACKAGES += \
 # Charging sounds
 PRODUCT_COPY_FILES += \
     vendor/aosp/google/effects/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
-    vendor/aosp/google/effects/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
+    vendor/aosp/google/effects/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg \
+    vendor/aosp/google/effects/GoodBattery.ogg:system/media/audio/ui/GoodBattery.ogg
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
