@@ -65,6 +65,13 @@ PRODUCT_COPY_FILES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    DeepPurpleTheme \
+    IndigoTheme \
+    PinkTheme \
+    PurpleTheme \
+    RedTheme \
+    SkyBlueTheme \
+    YellowTheme \
     PixelTheme \
     Stock
 
