@@ -1,0 +1,2 @@
+allow per_mgr default_android_service:service_manager { add find };
+allow per_mgr servicemanager:binder { call transfer };
