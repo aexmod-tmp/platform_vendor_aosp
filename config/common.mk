@@ -25,7 +25,8 @@ PRODUCT_BRAND ?= AEX
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh
+    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/aosp/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # init.d script support
 PRODUCT_COPY_FILES += \
