@@ -45,8 +45,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
-    LawnChair \
-    Lawnfeed \
+    Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
@@ -101,6 +100,10 @@ PRODUCT_PACKAGES += \
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
+
+# Telephony extension
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
