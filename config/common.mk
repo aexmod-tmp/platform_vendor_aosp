@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
     Turbo \
     ViaBrowser \
     Retro \
-    OmniJaws\
+    OmniJaws \
+    OmniStyle \
     WallpaperPickerGoogle 
 #    KernelAdiutor
 
