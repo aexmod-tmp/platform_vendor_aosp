@@ -18,3 +18,6 @@ $(call inherit-product, vendor/aosp/config/common.mk)
 $(call inherit-product, vendor/aosp/config/telephony.mk)
 
 $(call inherit-product, vendor/aosp/config/aex_props.mk)
+
+# include definitions for SDCLANG
+include vendor/aosp/sdclang/sdclang.mk
