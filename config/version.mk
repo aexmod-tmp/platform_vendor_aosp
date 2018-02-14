@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Extended Versioning
-EXTENDED_VERSION = v5.1
+EXTENDED_VERSION = v5.2
 
 #ifndef EXTENDED_BUILD_TYPE
     EXTENDED_BUILD_TYPE := Mod
@@ -26,14 +26,19 @@ $(call inherit-product-if-exists, vendor/aosp/config/ota.mk)
 
 endif
 
-EXTENDED_MOD_VERSION := AospExtended-$(EXTENDED_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(EXTENDED_BUILD_TYPE)
+EXTENDED_MOD_VERSION := AEX-Mod-$(EXTENDED_VERSION)-$(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.extended.version=$(EXTENDED_VERSION) \
   ro.extended.releasetype=$(EXTENDED_BUILD_TYPE) \
   ro.modversion=$(EXTENDED_MOD_VERSION)
   
-EXTENDED_DISPLAY_VERSION := AospExtended-$(EXTENDED_VERSION)-$(EXTENDED_BUILD_TYPE)
+EXTENDED_DISPLAY_VERSION := AEX-Mod-$(EXTENDED_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.extended.display.version=$(EXTENDED_DISPLAY_VERSION)
+
+# CLang info
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.clang.version=Snapdragon-LLVM-4.0.2
+
