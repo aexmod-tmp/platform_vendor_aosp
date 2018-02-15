@@ -28,17 +28,17 @@ endif
 
 EXTENDED_MOD_VERSION := AEX-Mod-$(EXTENDED_VERSION)-$(shell date -u +%Y%m%d-%H%M)
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
   ro.extended.version=$(EXTENDED_VERSION) \
   ro.extended.releasetype=$(EXTENDED_BUILD_TYPE) \
   ro.modversion=$(EXTENDED_MOD_VERSION)
   
 EXTENDED_DISPLAY_VERSION := AEX-Mod-$(EXTENDED_VERSION)
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
   ro.extended.display.version=$(EXTENDED_DISPLAY_VERSION)
 
 # CLang info
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
     ro.clang.version=Snapdragon-LLVM-4.0.2
 
