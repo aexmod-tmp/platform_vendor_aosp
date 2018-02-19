@@ -178,9 +178,10 @@ PRODUCT_PACKAGES += \
     librsjni \
     libprotobuf-cpp-full
 
-# Charger images
-PRODUCT_PACKAGES += \
-    charger_res_images
+# ART changes
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
