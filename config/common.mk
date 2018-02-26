@@ -12,14 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# include definitions for SDCLANG
-# include vendor/aosp/sdclang/sdclang.mk
 
- include vendor/aosp/config/version.mk
+include vendor/aosp/config/version.mk
+
+include vendor/aosp/config/art.mk
 
 PRODUCT_BRAND ?= AEX
-
-
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -177,11 +175,3 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     librsjni \
     libprotobuf-cpp-full
-
-# ART changes
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-
-# Recommend using the non debug dexpreopter
-USE_DEX2OAT_DEBUG ?= false
