@@ -21,5 +21,4 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
   Settings \
   NexusLauncherPrebuilt \
   GoogleCamera \
-  GoogleDialer \
-  Phonesky \
+
