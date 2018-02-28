@@ -38,7 +38,14 @@ EXTENDED_DISPLAY_VERSION := AEX-Mod-$(EXTENDED_VERSION)
 PRODUCT_GENERIC_PROPERTIES += \
   ro.extended.display.version=$(EXTENDED_DISPLAY_VERSION)
 
-# CLang info
-PRODUCT_GENERIC_PROPERTIES += \
-    ro.clang.version=Snapdragon-LLVM-4.0.2
 
+# DragonTC info
+DRAGONTC_VERSION := 7.0
+
+DTC_PATH := prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)
+DTC_VER := $(shell cat $(DTC_PATH)/VERSION)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.clang.version=$(DTC_VER)
+
+-include prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)/DragonTC.mk
