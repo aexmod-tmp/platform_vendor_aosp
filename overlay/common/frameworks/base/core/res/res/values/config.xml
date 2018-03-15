@@ -91,6 +91,7 @@
         <item>com.google.android.gms</item>
     </string-array>
 
+
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
@@ -106,4 +107,10 @@
           1 = Available.
      -->
     <integer name="config_wifi_wakeup_available">1</integer>
+
+    <!-- System font packages (overlay in vendor) -->
+    <string-array name="config_fontPackages" translatable="false">
+        <item>com.custom.fonts</item>
+    </string-array>
+
 </resources>
