@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     vendor/aosp/prebuilt/common/viperfx/audio_effects.conf:system/etc/audio_effects.conf
 
 # Themes
+# Accents
 PRODUCT_PACKAGES += \
     DeepPurpleTheme \
     IndigoTheme \
@@ -82,6 +83,18 @@ PRODUCT_COPY_FILES += \
 # Fonts
 PRODUCT_PACKAGES += \
     Custom-Fonts
+
+# UI Variants
+PRODUCT_PACKAGES += \
+    SystemDarkTheme \
+    SettingsDarkTheme \
+    DuiDarkTheme \
+    SystemBlackTheme \
+    SettingsBlackTheme \
+    DuiBlackTheme \
+    SystemExtendedTheme \
+    SettingsExtendedTheme \
+    DuiExtendedTheme \
 
 # Extra tools
 PRODUCT_PACKAGES += \
