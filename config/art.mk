@@ -5,6 +5,10 @@ ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
+# Dex pre-opt
+WITH_DEXPREOPT := true
+DEX_PREOPT_DEFAULT := nostripping
+
 # Default compiler
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
 
@@ -20,5 +24,5 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
   SystemUI \
   Settings \
   NexusLauncherPrebuilt \
-  GoogleCamera \
+  GoogleCamera
 
