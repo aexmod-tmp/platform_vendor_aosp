@@ -26,3 +26,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
   NexusLauncherPrebuilt \
   GoogleCamera
 
+# Dex pre-opt profiles
+ifneq ($(wildcard vendor/dexoptProfiles/),)
+  PRODUCT_DEX_PREOPT_PROFILE_DIR := vendor/dexoptProfiles
+  WITH_DEX_PREOPT_GENERATE_PROFILE := true
+endif
+
