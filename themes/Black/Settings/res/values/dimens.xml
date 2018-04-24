@@ -3,4 +3,6 @@
     <!-- Cardview Preference -->
     <dimen name="card_elevation">3dp</dimen>
     <dimen name="card_corner_radius">8dp</dimen>
+
+    <bool name="theme_dark">true</bool>
 </resources>
