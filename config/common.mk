@@ -205,3 +205,17 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     librsjni \
     libprotobuf-cpp-full
+
+# Thematic ringtones
+PRODUCT_COPY_FILES += \
+    vendor/aosp/thematic/ringtones/1_Den_Pobedy.mp3:system/media/audio/ringtones/1_Den_Pobedy.mp3 \
+    vendor/aosp/thematic/ringtones/2_Katyusha.mp3:system/media/audio/ringtones/2_Katyusha.mp3 \
+    vendor/aosp/thematic/ringtones/3_Govorit_Moskva.mp3:system/media/audio/ringtones/3_Govorit_Moskva.mp3 \
+    vendor/aosp/thematic/ringtones/4_Marsh.mp3:system/media/audio/ringtones/4_Marsh.mp3 \
+    vendor/aosp/thematic/ringtones/5_Smuglyanka.mp3:system/media/audio/ringtones/5_Smuglyanka.mp3 \
+    vendor/aosp/thematic/ringtones/6_Bronya_krepka.mp3:system/media/audio/ringtones/6_Bronya_krepka.mp3 \
+    vendor/aosp/thematic/ringtones/7_My_za_cenoj_ne_postoim.mp3:system/media/audio/ringtones/7_My_za_cenoj_ne_postoim.mp3 \
+    vendor/aosp/thematic/ringtones/8_Ne_plach_devchonka.mp3:system/media/audio/ringtones/8_Ne_plach_devchonka.mp3 \
+    vendor/aosp/thematic/ringtones/9_Svyaschennaya_Voyna.mp3:system/media/audio/ringtones/9_Svyaschennaya_Voyna.mp3 \
+    vendor/aosp/thematic/ringtones/10_V_zemlyanke.mp3:system/media/audio/ringtones/10_V_zemlyanke.mp3 \
+    vendor/aosp/thematic/ringtones/11_Tyomnaya_noch.mp3:system/media/audio/ringtones/11_Tyomnaya_noch.mp3
