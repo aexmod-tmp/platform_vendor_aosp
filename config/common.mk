@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
     Retro \
     OmniJaws \
     OmniStyle \
-    WallpaperPickerGoogle 
+    WallpaperPickerGoogle
 #    KernelAdiutor
 
 #PRODUCT_PACKAGES += \
@@ -132,6 +132,8 @@ PRODUCT_PACKAGES += \
     tinymix \
     unrar \
     unzip \
+    libcyanogen-dsp \
+    audio_effects.xml\
     zip
 
 # Exchange support
