@@ -139,15 +139,22 @@ PRODUCT_PACKAGES += \
     unzip \
     libcyanogen-dsp \
     audio_effects.xml\
+    com.github.aexmod \
     zip
 
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
 
+# Lineage Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.lineageos.hardware \
+    org.lineageos.hardware.xml
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
+    vendor/aosp/config/permissions/org.lineageos.livedisplay.xml:system/etc/permissions/org.lineageos.livedisplay.xml
 
 # init.d support
 PRODUCT_COPY_FILES += \
